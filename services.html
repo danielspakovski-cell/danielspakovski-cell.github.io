@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="lt">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Services - FolioOne Bootstrap Template</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+  <title>Paslaugos - Daniel Špakovski</title>
+  <meta name="description" content="Danieliaus Špakovskio – elektronikos inžinieriaus ir technologijų specialisto – teikiamos paslaugos, įrankiai ir darbo eigos etapai.">
+  <meta name="keywords" content="paslaugos, inžinerija, elektronika, programavimas, PCB, įrankiai, etapas, Daniel Špakovski">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="assets/img/services/manopikt.jpg" rel="icon">
+  <link href="assets/img/services/manopikt.jpg" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,8₀;₀,9₀;1,1₀;1,2₀;1,3₀;1,4₀;1,5₀;1,6₀;1,7₀;1,8₀;1,9₀&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -26,6 +26,36 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- Papildomi stiliai, kad lentelės ir sąrašai būtų visiškai nepermatomi ir gerai skaitomi -->
+  <style>
+    .custom-readable-box {
+      background-color: #ffffff !important;
+      color: #212529 !important;
+      opacity: 1 !important;
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    }
+    .custom-readable-box h3, 
+    .custom-readable-box li, 
+    .custom-readable-box p {
+      color: #212529 !important;
+      opacity: 1 !important;
+    }
+    .table-custom-opaque {
+      background-color: #ffffff !important;
+      color: #212529 !important;
+    }
+    .table-custom-opaque th, 
+    .table-custom-opaque td {
+      color: #212529 !important;
+      background-color: #ffffff !important;
+      opacity: 1 !important;
+    }
+    .table-custom-opaque thead th {
+      background-color: #212529 !important;
+      color: #ffffff !important;
+    }
+  </style>
 
   <!-- =======================================================
   * Template Name: FolioOne
@@ -41,19 +71,14 @@
   <header id="header" class="header d-flex align-items-center light-background sticky-top">
     <div class="container position-relative d-flex align-items-center justify-content-between">
 
-      <!-- <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-      <img src="assets/img/logo.webp" alt="">
-      <h1 class="sitename">FolioOne</h1> 
-    </a> -->
-
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="resume.html">Resume</a></li>
-          <li><a href="services.html" class="active">Services</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html">Pagrindinis</a></li>
+          <li><a href="about.html">Apie</a></li>
+          <li><a href="resume.html">Patirtis</a></li>
+          <li><a href="services.html" class="active">Paslaugos</a></li>
+          <li><a href="portfolio.html">Portfelis</a></li>
+          <li><a href="contact.html">Kontaktai</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -75,23 +100,94 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Services</h2>
+        <h2>Paslaugos</h2>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        
+        <div class="row mb-5">
+          <div class="col-12">
+            <div class="table-responsive">
+              <table class="table table-bordered align-middle table-custom-opaque">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Paslauga</th>
+                    <th scope="col">Aprašymas</th>
+                    <th scope="col">Kaina</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Spausdintinių plokščių (PCB) projektavimas</td>
+                    <td>Profesionalus schemų ir dvipusių/daugiasluoksnių PCB projektavimas pagal individualius užsakymus.</td>
+                    <td>150 Eur</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Mikrokontrolerių programavimas</td>
+                    <td>Įterptųjų sistemų (Embedded Systems) programavimas, aparatinės įrangos valdymas (ARM, ESP32).</td>
+                    <td>120 Eur</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Techninė konsultacija ir prototipavimas</td>
+                    <td>Konsultacijos elektronikos inžinerijos klausimais ir pirminių funkcinių prototipų kūrimas.</td>
+                    <td>80 Eur</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <!-- Lentelės pabaiga -->
+
+        <!-- Papildomi HTML sąrašai -->
+        <div class="row mb-5 g-4">
+          <!-- Nenumeruotas sąrašas su technologijomis -->
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="150">
+            <div class="p-4 border rounded custom-readable-box h-100">
+              <h3 class="h4 mb-3">Naudojamos technologijos ir įrankiai</h3>
+              <ul class="mb-0">
+                <li>KiCad / Altium Designer (PCB projektavimo programos)
+                  <ul class="mt-2">
+                    <li>3D vizualizacijų generavimui</li>
+                    <li>Gamybinių Gerber failų ruošimui</li>
+                  </ul>
+                </li>
+                <li>C ir C++ programavimo kalbos</li>
+                <li>Laboratorinė matavimo įranga (osiliografai, multimetrai)</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="p-4 border rounded custom-readable-box h-100">
+              <h3 class="h4 mb-3">Pirmieji paslaugos atlikimo etapai</h3>
+              <ol class="mb-0">
+                <li>Kliento poreikių analizė ir techninės specifikacijos (TZ) paruošimas.</li>
+                <li>Pirminio scheminio plano bei komponentų parinkimas.</li>
+                <li>Prototipo konstravimas, programavimas ir pirminis testavimas laboratorijoje.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <!-- Sąrašų pabaiga -->
 
         <div class="row justify-content-center g-5">
 
           <div class="col-md-6" data-aos="fade-right" data-aos-delay="100">
             <div class="service-item">
               <div class="service-icon">
-                <i class="bi bi-code-slash"></i>
+                <i class="bi bi-cpu"></i>
               </div>
               <div class="service-content">
-                <h3>Custom Web Development</h3>
-                <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Nulla quis lorem ut libero malesuada feugiat. Curabitur non nulla sit amet nisl tempus convallis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <h3>Elektronikos sistemų kūrimas</h3>
+                <p>Nuo pirminės idėjos iki veikiančio prototipo. Projektuoju patikimus elektronikos mazgus ir įrenginius, pritaikytus specifiniams Jūsų poreikiams.</p>
                 <a href="" class="service-link">
-                  <span>Learn More</span>
+                  <span>Sužinoti daugiau</span>
                   <i class="bi bi-arrow-right"></i>
                 </a>
               </div>
@@ -101,13 +197,13 @@
           <div class="col-md-6" data-aos="fade-left" data-aos-delay="100">
             <div class="service-item">
               <div class="service-icon">
-                <i class="bi bi-phone-fill"></i>
+                <i class="bi bi-code-slash"></i>
               </div>
               <div class="service-content">
-                <h3>Mobile App Solutions</h3>
-                <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vivamus magna justo, lacinia eget consectetur sed. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Donec rutrum congue leo eget malesuada.</p>
+                <h3>Įterptųjų sistemų programavimas</h3>
+                <p>Kuriu efektyvų ir optimizuotą programinį kodą mikrokontroleriams, užtikrinantį sklandų aparatinės įrangos ir jutiklių tarpusavio darbą.</p>
                 <a href="" class="service-link">
-                  <span>Learn More</span>
+                  <span>Sužinoti daugiau</span>
                   <i class="bi bi-arrow-right"></i>
                 </a>
               </div>
@@ -117,13 +213,13 @@
           <div class="col-md-6" data-aos="fade-right" data-aos-delay="200">
             <div class="service-item">
               <div class="service-icon">
-                <i class="bi bi-palette2"></i>
+                <i class="bi bi-tools"></i>
               </div>
               <div class="service-content">
-                <h3>UI/UX Design</h3>
-                <p>Pellentesque in ipsum id orci porta dapibus. Proin eget tortor risus. Vivamus suscipit tortor eget felis porttitor volutpat. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.</p>
+                <h3>Diagnostika ir derinimas</h3>
+                <p>Atlieku esamų elektronikos grandinių patikrą, klaidų paiešką, testavimą laboratorinėje aplinkoje ir plokščių optimizavimą.</p>
                 <a href="" class="service-link">
-                  <span>Learn More</span>
+                  <span>Sužinoti daugiau</span>
                   <i class="bi bi-arrow-right"></i>
                 </a>
               </div>
@@ -133,13 +229,13 @@
           <div class="col-md-6" data-aos="fade-left" data-aos-delay="200">
             <div class="service-item">
               <div class="service-icon">
-                <i class="bi bi-bar-chart-line"></i>
+                <i class="bi bi-file-earmark-text"></i>
               </div>
               <div class="service-content">
-                <h3>Digital Marketing</h3>
-                <p>Donec rutrum congue leo eget malesuada. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Nulla porttitor accumsan tincidunt. Curabitur aliquet quam id dui posuere blandit.</p>
+                <h3>Techninė dokumentacija</h3>
+                <p>Rengiu pilnus techninius aprašymus, specifikacijas ir gamybinius brėžinius, reikalingus sklandžiai gaminių serijinei gamybai.</p>
                 <a href="" class="service-link">
-                  <span>Learn More</span>
+                  <span>Sužinoti daugiau</span>
                   <i class="bi bi-arrow-right"></i>
                 </a>
               </div>
@@ -158,7 +254,7 @@
 
     <div class="container">
       <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">FolioOne</strong> <span>All Rights Reserved<br></span></p>
+        <p>© <span>Autorių teisės</span> <strong class="px-1 sitename">FolioOne</strong> <span>Visos teisės saugomos<br></span></p>
       </div>
       <div class="social-links d-flex justify-content-center">
         <a href=""><i class="bi bi-twitter-x"></i></a>
@@ -167,10 +263,6 @@
         <a href=""><i class="bi bi-linkedin"></i></a>
       </div>
       <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
         Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> | <a href="https://bootstrapmade.com/tools/">DevTools</a>
       </div>
     </div>
