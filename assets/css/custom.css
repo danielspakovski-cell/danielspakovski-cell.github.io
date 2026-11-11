@@ -1,0 +1,186 @@
+/*sriftai*/
+body,h1, h2, h3, h4, h5, h6, button {
+  font-family: 'Times New Roman', serif; 
+}
+
+/*antraščių (<h1-<h6>) stilius, dydis, storis, spalva */
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #edf2f6;
+}
+h2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #16a085;
+}
+h3 {
+  font-size: 22px;
+  font-weight: 666;
+  color: #35c471;
+}
+h4 {
+  font-size: 28px;
+  font-weight: 500;
+  color: #92b1d1;
+}
+h5 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #16a085;
+}
+h6 {
+  font-size: 22px;
+  font-weight: 667;
+  color: #ff2dd5;
+}
+/* pastraipų (<p>) stilius (dydis, spalva, eilutės aukštis) */
+p {
+  font-size: 22px;
+  color: hsl(0, 95%, 64%);
+  line-height: 1.6; 
+}
+
+/* a. Mygtukų ir jų pseudo-klasių stiliai */
+button, .btn {
+  background-color: #37afff; /* Pradinė mygtuko spalva */
+  color: #d4d492;            /* Teksto spalva */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: background-color 0.4s ease;
+}
+
+/* Kai užeidinėjama pele ant mygtuko */
+button:hover, .btn:hover {
+  background-color: #1a5a86; }
+
+/* Kai mygtukas paspaudžiamas */
+button:active, .btn:active {
+  background-color: #01263e; 
+}
+
+
+/* b. Nuorodų (linkų) stiliai */
+a {
+  color: #ff7700;          /* Nuorodos spalva */
+  text-decoration: none;   /* Pašalina apatinį brūkšnį */
+}
+
+a:hover {
+  color: #fedc01;          /* Spalva užvedus pelę ant nuorodos */
+  text-decoration: underline; /* Užvedus parodo brūkšnį */
+}
+
+/* a. Tarpu (Margin ir Padding) keitimas sekcijoms „Apie“, „Patirtis“, „Atlikti darbai“ */
+.about-section {
+  padding: 70px 27px;   
+  margin-bottom: 42px;  /* Išorinis tarpas apačioje iki kitos sekcijos */
+}
+
+.resume-item {
+  background-color: #00679380;
+  border: 1px solid #fcaf34c2;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(245, 42, 42, 0.378);
+  padding: 25px;
+  margin-bottom: 30px;
+}
+.portfolio-item {
+  padding: 56px 28px;
+  margin-bottom: 42px;
+}
+
+/* b. Turinio blokų išvaizdos tobulinimas */
+#card, .content-block, section {
+  background-color: #01c8e2;
+  border: 1px solid #ffc3c3;        
+  border-radius: 10px;                
+  box-shadow: 0 4px 8px rgba(251, 35, 35, 0.436); 
+  padding: 27px;
+  margin: 12px 0;
+}
+/* 1 komponentas: Navigacijos juosta */
+ #header, #navmenu {
+  background-color: #25b566;         
+  border-bottom: 3px solid #ff6756;  
+  box-shadow: 0 4px 6px rgba(255, 39, 39, 0.525); 
+}
+
+/* 2 komponentas: Puslapio apačia  */
+#footer {
+  background-color: #34495e;         
+  padding: 30px 0;                  
+  border-top-left-radius: 15px;      
+  border-top-right-radius: 15px;     
+}
+/* a. Nenumeruoto sąrašo išvaizdos keitimas */
+ul {
+  list-style-type: none; 
+  padding-left: 20px;
+}
+
+ul li {
+  position: relative;
+  margin-bottom: 8px;
+}
+
+ul li::before {
+  content: "/"; 
+  color: #ffff02; 
+  font-weight: 667;
+  display: inline-block;
+  width: 1em;
+  margin-left: 0em;
+}
+
+/* b. Atskiras stilius įdėtiniam sąrašui */
+ul ul {
+  margin-top: 5px;
+  padding-left: 15px;
+}
+
+ul ul li::before {
+  content: "–"; 
+  color: #e74c3c; 
+}
+/* Pagrindinis lentelės rėmelis ir plotis */
+.custom-table, table.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background-color: #ffffff;
+  border-radius: 8px; /* Užapvalinti lentelės kampai */
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Švelnus šešėlis aplink lentelę */
+  margin-top: 15px;
+}
+
+.custom-table th, table.table th {
+  background-color: #1e3f20; 
+  color: #ffffff;            
+  padding: 15px 20px;       
+  text-align: center;        
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+}
+
+/* c. Duomenų langelių stiliai ir tarpai */
+.custom-table td, table.table td {
+  padding: 14px 20px;       
+  text-align: center;        
+  color: #333333;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+
+.custom-table tbody tr:nth-child(even), table.table tbody tr:nth-child(even) {
+  background-color: #22e653; /* Švelnus kitos eilutės atspalvis */
+}
+
+.custom-table tbody tr:hover, table.table tbody tr:hover {
+  background-color: #e2ede5; 
+  transition: background-color 0.2s ease;
+}
