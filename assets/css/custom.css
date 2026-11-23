@@ -184,3 +184,192 @@ ul ul li::before {
   background-color: #e2ede5; 
   transition: background-color 0.2s ease;
 }
+/* Naujos skilties išdėstymas */
+.skill-kanban-section {
+  padding-top: 30px;
+  padding-bottom: 60px;
+}
+
+/* XP, lygio ir rango sritis */
+.kanban-top-panel {
+  background-color: #0b3b4c;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 12px;
+  padding: 22px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.xp-info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.xp-stat-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background-color: rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  padding: 14px 16px;
+}
+
+.xp-label {
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+.xp-value {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* Progreso juosta */
+.xp-progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.xp-progress-track {
+  width: 100%;
+  height: 14px;
+  background-color: rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.xp-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #2ecc71, #27ae60);
+  border-radius: 999px;
+  transition: width 0.3s ease;
+}
+
+/* Įgūdžių pažangos statistikos sritis */
+.kanban-stats-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.stat-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background-color: #132933;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: 14px;
+}
+
+/* Kanban lenta (3 kategorijos) */
+.kanban-board {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  align-items: start;
+}
+
+.kanban-column {
+  background-color: #0e242e;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  padding: 16px;
+  color: #ffffff;
+}
+
+.kanban-column-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 12px;
+  margin-bottom: 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.kanban-column-header h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.column-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 28px;
+  height: 28px;
+  padding: 0 8px;
+  border-radius: 999px;
+  background-color: rgba(255, 255, 255, 0.14);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Įgūdžių kortelės */
+.kanban-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.skill-kanban-card {
+  background-color: #ffffff;
+  color: #1c2833;
+  border-radius: 10px;
+  padding: 14px 16px;
+  border-left: 4px solid #3498db;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+.skill-kanban-card.is-completed {
+  border-left-color: #27ae60;
+}
+
+.skill-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.skill-name {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1c2833;
+}
+
+.skill-xp {
+  flex-shrink: 0;
+  padding: 3px 9px;
+  border-radius: 999px;
+  background-color: #eaf4fc;
+  color: #1f618d;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.skill-status {
+  margin: 0;
+  font-size: 13px;
+  color: #4a5568;
+}
+
+/* Mažesniems ekranams */
+@media (max-width: 991px) {
+  .kanban-board,
+  .xp-info-grid {
+    grid-template-columns: 1fr;
+  }
+}
