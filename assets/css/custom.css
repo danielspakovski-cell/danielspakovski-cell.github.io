@@ -373,3 +373,104 @@ ul ul li::before {
     grid-template-columns: 1fr;
   }
 }
+/* Aštresnis ir ryškiau matomas animuotas gradientas „Paslaugų“ skiltyje */
+#services.services.section {
+  background: linear-gradient(
+    135deg,
+    #0f2027 0%,
+    #0f2027 30%,
+    #00b4d8 32%,
+    #0077b6 65%,
+    #48cae4 68%,
+    #0f2027 100%
+  );
+  background-size: 350% 350%;
+  animation: paslauguAstrusGradientas 7s ease-in-out infinite;
+  position: relative;
+}
+
+#services.services.section > .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Pusiau permatomas fonas, kad gradientas šviestų ir per korteles, bet tekstas liktų įskaitomas */
+#services .media-box,
+#services .service-item {
+  background-color: rgba(10, 22, 34, 0.55);
+  border-radius: 10px;
+}
+
+#services .service-item {
+  padding: 24px;
+}
+
+@keyframes paslauguAstrusGradientas {
+  0% {
+    background-position: 0% 20%;
+  }
+  50% {
+    background-position: 100% 80%;
+  }
+  100% {
+    background-position: 0% 20%;
+  }
+}
+/* CSS figūros ir animacijos „Apie“ skiltyje */
+#about.about.section {
+  position: relative;
+  overflow: hidden;
+}
+
+.about-shapes-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 140px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* 1 figūra: Apskritimas  */
+.about-circle {
+  position: absolute;
+  top: 16px;
+  right: 24px;
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+  background-color: rgba(13, 110, 253, 0.25);
+  border: 5px solid #0d6efd;
+  animation: figurosDidejimas2x 4.5s ease-in-out infinite;
+}
+
+/* 2 figūra: Trikampis  */
+.about-triangle {
+  position: absolute;
+  bottom: 16px;
+  left: 24px;
+  width: 0;
+  height: 0;
+  border-left: 48px solid transparent;
+  border-right: 48px solid transparent;
+  border-bottom: 84px solid #198754;
+  opacity: 0.85;
+  animation: figurosSukimasis2x 7s linear infinite;
+}
+
+@keyframes figurosDidejimas2x {
+  0%, 100% {
+    transform: scale(1) translateY(0);
+  }
+  50% {
+    transform: scale(1.25) translateY(-10px);
+  }
+}
+
+@keyframes figurosSukimasis2x {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
