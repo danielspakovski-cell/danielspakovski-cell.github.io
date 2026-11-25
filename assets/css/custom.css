@@ -474,3 +474,165 @@ ul ul li::before {
     transform: rotate(360deg);
   }
 }
+ /* Kontaktų formos vientisumo ir išdėstymo stiliai */
+.cv-contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  background-color: #ffffff;
+  color: #1f2937;
+  padding: 28px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.form-row-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.form-group-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group-item label,
+.rating-header label {
+  font-weight: 600;
+  font-size: 14px;
+  color: #1f2937;
+}
+
+.form-group-item input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 15px;
+  color: #1f2937;
+  background-color: #f8fafc;
+}
+
+.form-group-item input:focus {
+  outline: none;
+  border-color: #0d6efd;
+  background-color: #ffffff;
+}
+
+/* 3 vertinimo klausimų blokas */
+.rating-questions-box {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 18px;
+  border-radius: 10px;
+  background-color: #f1f5f9;
+  border: 1px solid #e2e8f0;
+}
+
+.rating-questions-box h3 {
+  margin: 0 0 4px 0;
+  font-size: 17px;
+  color: #0f172a;
+}
+
+.rating-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.rating-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.rating-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 30px;
+  height: 26px;
+  padding: 0 8px;
+  border-radius: 999px;
+  background-color: #0d6efd;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.rating-item input[type="range"] {
+  width: 100%;
+  cursor: pointer;
+}
+
+/* Mygtukas „Siųsti“ */
+.form-actions {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.btn-submit-form {
+  padding: 12px 28px;
+  border: none;
+  border-radius: 8px;
+  background-color: #0d6efd;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, opacity 0.2s ease;
+}
+
+.btn-submit-form:hover:not(:disabled) {
+  background-color: #0b5ed7;
+}
+
+.btn-submit-form:disabled {
+  background-color: #94a3b8;
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* Rezultatų atvaizdavimo blokas */
+.form-result-box {
+  display: none;
+  margin-top: 8px;
+  padding: 18px;
+  border-radius: 10px;
+  background-color: #eef2e6;
+  border: 1px solid #cbd5c0;
+  color: #1f2937;
+}
+
+.form-result-box.is-visible {
+  display: block;
+}
+
+.form-result-list {
+  font-style: italic;
+  line-height: 1.65;
+}
+
+.form-result-list a {
+  color: #0d6efd;
+  text-decoration: underline;
+}
+
+.form-average-line {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(31, 41, 55, 0.2);
+  font-style: italic;
+  font-weight: 700;
+}
+
+@media (max-width: 767px) {
+  .form-row-grid {
+    grid-template-columns: 1fr;
+  }
+} 

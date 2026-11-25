@@ -15,7 +15,7 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,8₀;₀,9₀;1,1₀;1,2₀;1,3₀;1,4₀;1,5₀;1,6₀;1,7₀;1,8₀;1,9₀&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -28,11 +28,11 @@
   <link href="assets/css/main.css" rel="stylesheet">
   <link href="assets/css/custom.css" rel="stylesheet">
   <!-- =======================================================
-  * Template Name: FolioOne
-  * Template URL: https://bootstrapmade.com/folioone-bootstrap-portfolio-website-template/
-  * Updated: Aug 23 2025 with Bootstrap v5.3.7
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
+- Template Name: FolioOne
+- Template URL: https://bootstrapmade.com/folioone-bootstrap-portfolio-website-template/
+- Updated: Aug 23 2025 with Bootstrap v5.3.7
+- Author: BootstrapMade.com
+- License: https://bootstrapmade.com/license/
   ======================================================== -->
 </head>
 
@@ -40,11 +40,6 @@
 
   <header id="header" class="header d-flex align-items-center light-background sticky-top">
     <div class="container position-relative d-flex align-items-center justify-content-between">
-
-      <!-- <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-      <img src="assets/img/logo.webp" alt="">
-      <h1 class="sitename">FolioOne</h1> 
-    </a> -->
 
       <nav id="navmenu" class="navmenu">
         <ul>
@@ -54,7 +49,7 @@
           <li><a href="services.html">Paslaugos</a></li>
           <li><a href="portfolio.html">Portfelis</a></li>
           <li><a href="igudziai.html">Įgūdžiai</a></li>
-          <li><a href="contact.html" class="active">Kontaktai</a></li>          
+          <li><a href="contact.html" class="active">Kontaktai</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -127,34 +122,70 @@
               <h3>Norite susisiekti?</h3>
               <p>Užpildykite formą ir su jumis susisieksiu iš karto.</p>
 
-              <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
-                <div class="row gy-4">
-
-                  <div class="col-md-6">
-                    <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+              <form id="custom-contact-form" class="cv-contact-form" novalidate>
+                <div class="form-row-grid">
+                  <div class="form-group-item">
+                    <label for="firstName">Vardas *</label>
+                    <input type="text" id="firstName" name="firstName" required placeholder="Įveskite vardą">
                   </div>
 
-                  <div class="col-md-6 ">
-                    <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                  <div class="form-group-item">
+                    <label for="lastName">Pavardė *</label>
+                    <input type="text" id="lastName" name="lastName" required placeholder="Įveskite pavardę">
                   </div>
-
-                  <div class="col-12">
-                    <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
-                  </div>
-
-                  <div class="col-12">
-                    <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
-                  </div>
-
-                  <div class="col-12 text-center">
-                    <div class="loading">Užkraunama...</div>
-                    <div class="error-message"></div>
-                    <div class="sent-message">Jūsų žinutė išsiųsta. Ačiū!</div>
-
-                    <button type="submit" class="btn">Siųsti žinutę</button>
-                  </div>
-
                 </div>
+
+                <div class="form-row-grid">
+                  <div class="form-group-item">
+                    <label for="email">El. paštas *</label>
+                    <input type="email" id="email" name="email" required placeholder="vardas@pastas.lt">
+                  </div>
+
+                  <div class="form-group-item">
+                    <label for="phone">Telefono numeris *</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="+370 600 00000">
+                  </div>
+                </div>
+
+                <div class="form-group-item">
+                  <label for="address">Adresas *</label>
+                  <input type="text" id="address" name="address" required placeholder="Gatvė, namo nr., miestas">
+                </div>
+
+                <div class="rating-questions-box">
+                  <h3>Įvertinimo klausimai (skalė 1–10)</h3>
+
+                  <div class="rating-item">
+                    <div class="rating-header">
+                      <label for="rating1">1. Kaip vertinate techninės informacijos aiškumą?</label>
+                      <span id="rating1-value" class="rating-badge">5</span>
+                    </div>
+                    <input type="range" id="rating1" name="rating1" min="1" max="10" value="5" step="1">
+                  </div>
+
+                  <div class="rating-item">
+                    <div class="rating-header">
+                      <label for="rating2">2. Kaip vertinate pateiktų projektų ir įgūdžių aktualumą?</label>
+                      <span id="rating2-value" class="rating-badge">5</span>
+                    </div>
+                    <input type="range" id="rating2" name="rating2" min="1" max="10" value="5" step="1">
+                  </div>
+
+                  <div class="rating-item">
+                    <div class="rating-header">
+                      <label for="rating3">3. Kaip bendrai vertinate svetainės pateikimą?</label>
+                      <span id="rating3-value" class="rating-badge">5</span>
+                    </div>
+                    <input type="range" id="rating3" name="rating3" min="1" max="10" value="5" step="1">
+                  </div>
+                </div>
+
+                <div class="form-actions">
+                  <button type="submit" id="submit-btn" class="btn-submit-form" disabled>Siųsti</button>
+                </div>
+
+                <!-- Rezultatų atvaizdavimo sritis formos apačioje -->
+                <div id="form-result" class="form-result-box" aria-live="polite"></div>
               </form>
 
             </div>
@@ -181,10 +212,6 @@
         <a href=""><i class="bi bi-linkedin"></i></a>
       </div>
       <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
         Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> | <a href="https://bootstrapmade.com/tools/">DevTools</a>
       </div>
     </div>
@@ -211,6 +238,127 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+    (() => {
+      const form = document.getElementById("custom-contact-form");
+      if (!form) return;
+
+      const firstNameInput = document.getElementById("firstName");
+      const lastNameInput = document.getElementById("lastName");
+      const emailInput = document.getElementById("email");
+      const phoneInput = document.getElementById("phone");
+      const addressInput = document.getElementById("address");
+
+      const rating1Input = document.getElementById("rating1");
+      const rating2Input = document.getElementById("rating2");
+      const rating3Input = document.getElementById("rating3");
+
+      const rating1Badge = document.getElementById("rating1-value");
+      const rating2Badge = document.getElementById("rating2-value");
+      const rating3Badge = document.getElementById("rating3-value");
+
+      const submitBtn = document.getElementById("submit-btn");
+      const resultBox = document.getElementById("form-result");
+
+      const requiredInputs = [
+        firstNameInput,
+        lastNameInput,
+        emailInput,
+        phoneInput,
+        addressInput
+      ];
+
+      [
+        [rating1Input, rating1Badge],
+        [rating2Input, rating2Badge],
+        [rating3Input, rating3Badge]
+      ].forEach(([slider, badge]) => {
+        badge.textContent = slider.value;
+        slider.addEventListener("input", () => {
+          badge.textContent = slider.value;
+        });
+      });
+
+      function updateSubmitButtonState() {
+        const allFilled = requiredInputs.every((input) => input.value.trim() !== "");
+        submitBtn.disabled = !allFilled;
+      }
+
+      requiredInputs.forEach((input) => {
+        input.addEventListener("input", updateSubmitButtonState);
+      });
+
+      updateSubmitButtonState();
+
+      function escapeHtml(value) {
+        const div = document.createElement("div");
+        div.textContent = value;
+        return div.innerHTML;
+      }
+
+      function escapeAttr(value) {
+        return String(value)
+          .replace(/&/g, "&amp;")
+          .replace(/"/g, "&quot;")
+          .replace(/'/g, "&#39;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;");
+      }
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        if (submitBtn.disabled) {
+          return;
+        }
+
+        const r1 = Number(rating1Input.value);
+        const r2 = Number(rating2Input.value);
+        const r3 = Number(rating3Input.value);
+        const average = Number(((r1 + r2 + r3) / 3).toFixed(1));
+
+        const formDataObject = {
+          vardas: firstNameInput.value.trim(),
+          pavarde: lastNameInput.value.trim(),
+          elPastas: emailInput.value.trim(),
+          telefonoNumeris: phoneInput.value.trim(),
+          adresas: addressInput.value.trim(),
+          ivertinimas1: r1,
+          ivertinimas2: r2,
+          ivertinimas3: r3,
+          vidurkis: average
+        };
+
+        console.log("Formos duomenų objektas:", formDataObject);
+
+        const safeVardas = escapeHtml(formDataObject.vardas);
+        const safePavarde = escapeHtml(formDataObject.pavarde);
+        const safeEmailText = escapeHtml(formDataObject.elPastas);
+        const safeEmailHref = escapeAttr(formDataObject.elPastas);
+        const safePhone = escapeHtml(formDataObject.telefonoNumeris);
+        const safeAddress = escapeHtml(formDataObject.adresas);
+
+        resultBox.innerHTML = `
+          <div class="form-result-list">
+            <div>Vardas: ${safeVardas}</div>
+            <div>Pavardė: ${safePavarde}</div>
+            <div>El. paštas: <a href="mailto:${safeEmailHref}">${safeEmailText}</a></div>
+            <div>Tel. Numeris: ${safePhone}</div>
+            <div>Adresas: ${safeAddress}</div>
+            <div>1 klausimo įvertinimas: ${formDataObject.ivertinimas1}/10</div>
+            <div>2 klausimo įvertinimas: ${formDataObject.ivertinimas2}/10</div>
+            <div>3 klausimo įvertinimas: ${formDataObject.ivertinimas3}/10</div>
+          </div>
+          <div class="form-average-line">
+            ${safeVardas} ${safePavarde}: ${formDataObject.vidurkis}
+          </div>
+        `;
+
+        resultBox.classList.add("is-visible");
+      });
+    })();
+  </script>
 
 </body>
 
